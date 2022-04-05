@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 19:39:16 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/05 00:06:01 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/05 18:21:03 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,8 @@ void	ClapTrap::takeDamage( unsigned int amount )
 		LOG("ClapTrap " << name << " takes " << amount << " damage! HP:"
 			<< hitpoints);
 	} else {
+		LOG("ClapTrap " << name << " takes " << hitpoints << " damage! HP:0");
 		setHitPoints(0);
-		LOG("ClapTrap " << name << " takes " << hitpoints << " damage! HP:"
-			<< hitpoints);
 	}
 }
 
