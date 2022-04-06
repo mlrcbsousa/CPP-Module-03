@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 19:40:57 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/04 23:36:12 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/06 09:26:26 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,15 @@ public:
 	~ClapTrap( void );
 	ClapTrap & operator = ( ClapTrap const & rhs );
 
-	std::string &	getName( void );
-	uint &			getHitPoints( void );
-	uint &			getEnergyPoints( void );
-	uint &			getAttackDamage( void );
-	void			setHitPoints( uint const amount );
-	void			setEnergyPoints( uint const amount );
+	std::string		getName( void ) const;
+	uint			getHitPoints( void ) const;
+	uint			getEnergyPoints( void ) const;
+	uint			getAttackDamage( void ) const;
+
+	void			setName( std::string const & name );
+	void			setHitPoints( uint const hitPoints );
+	void			setEnergyPoints( uint const energyPoints );
+	void			setAttackDamage( uint const attackDamage );
 
 	void		attack( const std::string & target );
 	void		takeDamage( unsigned int amount );
