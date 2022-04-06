@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 19:40:57 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/06 11:13:29 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/06 22:10:59 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ public:
 	ClapTrap & operator = ( ClapTrap const & rhs );
 
 	std::string		getName( void ) const;
-	uint			getHitPoints( void ) const;
-	uint			getEnergyPoints( void ) const;
-	uint			getAttackDamage( void ) const;
+	unsigned int			getHitPoints( void ) const;
+	unsigned int			getEnergyPoints( void ) const;
+	unsigned int			getAttackDamage( void ) const;
 
 	void			setName( std::string const & name );
-	void			setHitPoints( uint const hitPoints );
-	void			setEnergyPoints( uint const energyPoints );
-	void			setAttackDamage( uint const attackDamage );
+	void			setHitPoints( unsigned int const hitPoints );
+	void			setEnergyPoints( unsigned int const energyPoints );
+	void			setAttackDamage( unsigned int const attackDamage );
 
 	virtual void	attack( const std::string & target );
 	void			takeDamage( unsigned int amount );
@@ -49,13 +49,13 @@ public:
 protected:
 
 	// constructor only useable by derived classes
-	ClapTrap( std::string const & name, uint hitPoints, uint energyPoints, uint attackDamage);
-	ClapTrap( uint hitPoints, uint energyPoints, uint attackDamage );
+	ClapTrap( std::string const & name, unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage);
+	ClapTrap( unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage );
 
 	std::string	_name;
-	uint		_hitPoints;
-	uint		_energyPoints;
-	uint		_attackDamage;
+	unsigned int		_hitPoints;
+	unsigned int		_energyPoints;
+	unsigned int		_attackDamage;
 
 };
 

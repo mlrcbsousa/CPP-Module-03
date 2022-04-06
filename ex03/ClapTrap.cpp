@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 19:39:16 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/06 11:13:21 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/06 21:42:22 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ ClapTrap::ClapTrap( std::string const & name )
 
 ClapTrap::ClapTrap(
 	std::string const & name,
-	uint hitPoints,
-	uint energyPoints,
-	uint attackDamage) :
+	unsigned int hitPoints,
+	unsigned int energyPoints,
+	unsigned int attackDamage) :
 	_name(name),
 	_hitPoints(hitPoints),
 	_energyPoints(energyPoints),
@@ -37,10 +37,12 @@ ClapTrap::ClapTrap(
 	LOG("ClapTrap protected constructor called");
 }
 
-ClapTrap::ClapTrap( uint hitPoints, uint energyPoints, uint attackDamage ) :
-	_hitPoints(hitPoints),
-	_energyPoints(energyPoints),
-	_attackDamage(attackDamage)
+ClapTrap::ClapTrap( unsigned int hitPoints,
+					unsigned int energyPoints,
+					unsigned int attackDamage ) :
+					_hitPoints(hitPoints),
+					_energyPoints(energyPoints),
+					_attackDamage(attackDamage)
 {
 	LOG("ClapTrap Default protected constructor called");
 }
@@ -75,19 +77,19 @@ ClapTrap &  ClapTrap::operator = ( ClapTrap const & rhs )
 
 /* Getters */
 std::string	ClapTrap::getName( void ) const { return _name; }
-uint	ClapTrap::getHitPoints( void ) const { return _hitPoints; }
-uint	ClapTrap::getEnergyPoints( void ) const { return _energyPoints; }
-uint	ClapTrap::getAttackDamage( void ) const {return _attackDamage; }
+unsigned int 	ClapTrap::getHitPoints( void ) const { return _hitPoints; }
+unsigned int 	ClapTrap::getEnergyPoints( void ) const { return _energyPoints; }
+unsigned int 	ClapTrap::getAttackDamage( void ) const {return _attackDamage; }
 
 /* Setters */
 void	ClapTrap::setName( std::string const & name ) { _name = name; }
-void	ClapTrap::setHitPoints( uint const hitPoints ) { _hitPoints = hitPoints; }
-void	ClapTrap::setEnergyPoints( uint const energyPoints ) { _energyPoints = energyPoints; }
-void	ClapTrap::setAttackDamage( uint const attackDamage ) { _attackDamage = attackDamage; }
+void	ClapTrap::setHitPoints( unsigned int const hitPoints ) { _hitPoints = hitPoints; }
+void	ClapTrap::setEnergyPoints( unsigned int const energyPoints ) { _energyPoints = energyPoints; }
+void	ClapTrap::setAttackDamage( unsigned int const attackDamage ) { _attackDamage = attackDamage; }
 
 void	ClapTrap::attack( const std::string & target )
 {
-	uint		energy = getEnergyPoints();
+	unsigned int 		energy = getEnergyPoints();
 	std::string	name = getName();
 
 	if (!energy) {
@@ -102,7 +104,7 @@ void	ClapTrap::attack( const std::string & target )
 
 void	ClapTrap::takeDamage( unsigned int amount )
 {
-	uint		hitpoints = getHitPoints();
+	unsigned int 		hitpoints = getHitPoints();
 	std::string	name = getName();
 
 	if (!hitpoints) {
@@ -122,7 +124,7 @@ void	ClapTrap::takeDamage( unsigned int amount )
 
 void	ClapTrap::beRepaired( unsigned int amount )
 {
-	uint		energy = getEnergyPoints();
+	unsigned int 		energy = getEnergyPoints();
 	std::string	name = getName();
 
 	if (!energy) {

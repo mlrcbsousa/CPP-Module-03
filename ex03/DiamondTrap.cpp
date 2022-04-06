@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:04:54 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/06 12:57:51 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/06 23:26:02 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ DiamondTrap::DiamondTrap( std::string const & name ) :
 	LOG("DiamondTrap String constructor called");
 }
 
-DiamondTrap::DiamondTrap( DiamondTrap const & src ) : ClapTrap(src)
+DiamondTrap::DiamondTrap( DiamondTrap const & src ) :
+	ClapTrap(src), ScavTrap(), FragTrap()
 {
 	LOG("DiamondTrap Copy constructor called");
 }

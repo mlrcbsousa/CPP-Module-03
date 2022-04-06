@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:01:00 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/06 13:01:13 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/06 21:46:04 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 	~ScavTrap( void );
 	ScavTrap & operator = ( ScavTrap const & rhs );
 
-	virtual void	attack( const std::string & target ) = 0;
+	void	attack( const std::string & target );
 	void			guardGate( void );
 
 };
