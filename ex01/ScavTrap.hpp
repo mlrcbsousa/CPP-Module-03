@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:01:00 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/04 22:09:07 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/06 10:24:35 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,24 @@
 
 # include <iostream>
 
-# define LOG(x) std::cout << x << std::endl
-# define ERROR(x) std::cerr << x << std::endl
+# include "ClapTrap.hpp"
 
 // ************************************************************************** //
 //                               ScavTrap Class                               //
 // ************************************************************************** //
 
-class ScavTrap {
+class ScavTrap : public ClapTrap {
 
 public:
 
 	ScavTrap( void );
+	ScavTrap( std::string const & name );
 	ScavTrap( ScavTrap const & src );
 	~ScavTrap( void );
 	ScavTrap & operator = ( ScavTrap const & rhs );
 
-private:
-
-
+	void		attack( const std::string & target );
+	void		guardGate( void );
 
 };
 
