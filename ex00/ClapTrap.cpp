@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 19:39:16 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/06 09:52:21 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/06 10:46:26 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,10 @@ ClapTrap &  ClapTrap::operator = ( ClapTrap const & rhs )
 {
 	LOG("ClapTrap Assignment operator called");
 	if (this != &rhs) {
-		*this = rhs;
+		setName(rhs.getName());
+		setHitPoints(rhs.getHitPoints());
+		setEnergyPoints(rhs.getEnergyPoints());
+		setAttackDamage(rhs.getAttackDamage());
 	}
 	return *this;
 }

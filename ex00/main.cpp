@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:56:49 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/06 09:53:10 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/06 10:44:10 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ int	main( void )
 
 	clap.takeDamage(7);
 	clap.takeDamage(2);
+
+	ClapTrap bob;
+
+	bob = clap;
 
 	return 0;
 }
