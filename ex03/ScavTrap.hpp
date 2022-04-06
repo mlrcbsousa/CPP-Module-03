@@ -6,31 +6,31 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:01:00 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/04 20:01:35 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/06 13:01:13 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __SCAV_TRAP_H__
 # define __SCAV_TRAP_H__
 
-# include <iostream>
+# include "ClapTrap.hpp"
 
 // ************************************************************************** //
 //                               ScavTrap Class                               //
 // ************************************************************************** //
 
-class ScavTrap {
+class ScavTrap : public virtual ClapTrap {
 
 public:
 
 	ScavTrap( void );
+	ScavTrap( std::string const & name );
 	ScavTrap( ScavTrap const & src );
 	~ScavTrap( void );
 	ScavTrap & operator = ( ScavTrap const & rhs );
 
-private:
-
-
+	virtual void	attack( const std::string & target ) = 0;
+	void			guardGate( void );
 
 };
 

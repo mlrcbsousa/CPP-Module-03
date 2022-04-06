@@ -6,34 +6,36 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:04:59 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/04 22:10:57 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/06 13:01:19 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __DIAMOND_TRAP_H__
 # define __DIAMOND_TRAP_H__
 
-# include <iostream>
-
-# define LOG(x) std::cout << x << std::endl
-# define ERROR(x) std::cerr << x << std::endl
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
 // ************************************************************************** //
 //                               DiamondTrap Class                             //
 // ************************************************************************** //
 
-class DiamondTrap {
+class DiamondTrap: public ScavTrap, public FragTrap {
 
 public:
 
 	DiamondTrap( void );
+	DiamondTrap( std::string const & name );
 	DiamondTrap( DiamondTrap const & src );
 	~DiamondTrap( void );
 	DiamondTrap & operator = ( DiamondTrap const & rhs );
 
+	using	ScavTrap::attack;
+	// void	attack( const std::string & target );
+
 private:
 
-
+	std::string	_name;
 
 };
 
