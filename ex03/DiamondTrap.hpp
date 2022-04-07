@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:04:59 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/07 22:33:00 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/07 22:39:10 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ public:
 	~DiamondTrap( void );
 	DiamondTrap & operator = ( DiamondTrap const & rhs );
 
-	std::string		getName( void ) const;
-	void			setName( std::string const & name );
+	std::string	getName( void ) const;
+	void		setName( std::string const & name );
 
-	void	attack( const std::string & target );
-	void	whoAmI( void );
+	void		attack( const std::string & target );
+	void		whoAmI( void );
 
 private:
 

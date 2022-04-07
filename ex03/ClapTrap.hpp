@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 19:40:57 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/07 22:32:46 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/07 22:38:23 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,30 +32,30 @@ public:
 	~ClapTrap( void );
 	ClapTrap & operator = ( ClapTrap const & rhs );
 
-	virtual std::string		getName( void ) const;
-	uint			getHitPoints( void ) const;
-	uint			getEnergyPoints( void ) const;
-	uint			getAttackDamage( void ) const;
+	virtual std::string	getName( void ) const;
+	unsigned int		getHitPoints( void ) const;
+	unsigned int		getEnergyPoints( void ) const;
+	unsigned int		getAttackDamage( void ) const;
 
-	virtual void			setName( std::string const & name );
-	void			setHitPoints( uint const hitPoints );
-	void			setEnergyPoints( uint const energyPoints );
-	void			setAttackDamage( uint const attackDamage );
+	virtual void		setName( std::string const & name );
+	void				setHitPoints( unsigned int const hitPoints );
+	void				setEnergyPoints( unsigned int const energyPoints );
+	void				setAttackDamage( unsigned int const attackDamage );
 
-	virtual void	attack( const std::string & target );
-	void			takeDamage( unsigned int amount );
-	void			beRepaired( unsigned int amount );
+	virtual void		attack( const std::string & target );
+	void				takeDamage( unsigned int amount );
+	void				beRepaired( unsigned int amount );
 
 protected:
 
 	// constructor only useable by derived classes
-	ClapTrap( std::string const & name, uint hitPoints, uint energyPoints, uint attackDamage);
-	ClapTrap( uint hitPoints, uint energyPoints, uint attackDamage );
+	ClapTrap( std::string const & name, unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage);
+	ClapTrap( unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage );
 
-	std::string	_name;
-	uint		_hitPoints;
-	uint		_energyPoints;
-	uint		_attackDamage;
+	std::string		_name;
+	unsigned int	_hitPoints;
+	unsigned int	_energyPoints;
+	unsigned int	_attackDamage;
 
 };
 
