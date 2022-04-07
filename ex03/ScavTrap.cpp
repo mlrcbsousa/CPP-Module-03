@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:00:53 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/06 21:21:31 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/07 22:41:22 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ ScavTrap &  ScavTrap::operator = ( ScavTrap const & rhs )
 
 void	ScavTrap::attack( const std::string & target )
 {
-	unsigned int		energy = getEnergyPoints();
-	std::string	name = getName();
+	unsigned int	energy = getEnergyPoints();
+	std::string		name = getName();
 
 	if (!energy) {
 		LOG("ScavTrap " << name << " doesn't have any more energy!");
