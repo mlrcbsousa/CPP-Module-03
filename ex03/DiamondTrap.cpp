@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:04:54 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/06 12:57:51 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/07 22:34:23 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,20 @@
 
 /* Constructors */
 
-DiamondTrap::DiamondTrap( void ) : ClapTrap()
+DiamondTrap::DiamondTrap( void ) : ClapTrap(100, 50, 30), ScavTrap(), FragTrap()
 {
 	LOG("DiamondTrap Default constructor called");
-	LOG(FragTrap::getHitPoints());
-	LOG(ScavTrap::getEnergyPoints());
-	LOG(FragTrap::getAttackDamage());
 }
 
 DiamondTrap::DiamondTrap( std::string const & name ) :
-	ClapTrap(name + "_clap_name"), _name(name)
+	ClapTrap(name + "_clap_name", 100, 50, 30),
+	ScavTrap(), FragTrap(), _name(name)
 {
 	LOG("DiamondTrap String constructor called");
 }
 
-DiamondTrap::DiamondTrap( DiamondTrap const & src ) : ClapTrap(src)
+DiamondTrap::DiamondTrap( DiamondTrap const & src ) :
+	ClapTrap(src), ScavTrap(), FragTrap()
 {
 	LOG("DiamondTrap Copy constructor called");
 }
@@ -49,10 +48,21 @@ DiamondTrap &  DiamondTrap::operator = ( DiamondTrap const & rhs )
 	return *this;
 }
 
-// void	DiamondTrap::attack( const std::string & target )
-// {
-// 	ScavTrap::attack(target);
-// }
+/* Getters */
+std::string	DiamondTrap::getName( void ) const { return _name; }
+
+/* Setters */
+void	DiamondTrap::setName( std::string const & name ) { _name = name; }
+
+void	DiamondTrap::attack( const std::string & target )
+{
+	ScavTrap::attack(target);
+}
+
+void	DiamondTrap::whoAmI( void )
+{
+	LOG(ClapTrap::getName() << " and " << getName());
+}
 
 /* ostream override */
 std::ostream &  operator << ( std::ostream & o, DiamondTrap const & i)

@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:04:59 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/06 13:01:19 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/07 22:33:00 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 # include "FragTrap.hpp"
 
 // ************************************************************************** //
-//                               DiamondTrap Class                             //
+//                               DiamondTrap Class                            //
 // ************************************************************************** //
 
-class DiamondTrap: public ScavTrap, public FragTrap {
+class DiamondTrap : public ScavTrap, public FragTrap {
 
 public:
 
@@ -30,8 +30,11 @@ public:
 	~DiamondTrap( void );
 	DiamondTrap & operator = ( DiamondTrap const & rhs );
 
-	using	ScavTrap::attack;
-	// void	attack( const std::string & target );
+	std::string		getName( void ) const;
+	void			setName( std::string const & name );
+
+	void	attack( const std::string & target );
+	void	whoAmI( void );
 
 private:
 
