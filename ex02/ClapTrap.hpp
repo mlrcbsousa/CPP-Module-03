@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 19:40:57 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/06 21:21:31 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/08 19:45:27 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 	ClapTrap( void );
 	ClapTrap( std::string const & name );
 	ClapTrap( ClapTrap const & src );
-	~ClapTrap( void );
+	virtual ~ClapTrap( void );
 	ClapTrap & operator = ( ClapTrap const & rhs );
 
 	std::string		getName( void ) const;
