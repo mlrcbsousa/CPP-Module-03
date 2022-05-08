@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:02:15 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/06 21:21:31 by msousa           ###   ########.fr       */
+/*   Updated: 2022/05/08 13:23:32 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ FragTrap &  FragTrap::operator = ( FragTrap const & rhs )
 
 void	FragTrap::attack( const std::string & target )
 {
-	unsigned int		energy = getEnergyPoints();
+	uint		energy = getEnergyPoints();
 	std::string	name = getName();
 
 	if (!energy) {

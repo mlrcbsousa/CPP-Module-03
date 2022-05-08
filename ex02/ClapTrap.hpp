@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 19:40:57 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/08 19:45:27 by msousa           ###   ########.fr       */
+/*   Updated: 2022/05/08 13:23:39 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,29 +33,29 @@ public:
 	ClapTrap & operator = ( ClapTrap const & rhs );
 
 	std::string		getName( void ) const;
-	unsigned int			getHitPoints( void ) const;
-	unsigned int			getEnergyPoints( void ) const;
-	unsigned int			getAttackDamage( void ) const;
+	uint			getHitPoints( void ) const;
+	uint			getEnergyPoints( void ) const;
+	uint			getAttackDamage( void ) const;
 
 	void			setName( std::string const & name );
-	void			setHitPoints( unsigned int const hitPoints );
-	void			setEnergyPoints( unsigned int const energyPoints );
-	void			setAttackDamage( unsigned int const attackDamage );
+	void			setHitPoints( uint const hitPoints );
+	void			setEnergyPoints( uint const energyPoints );
+	void			setAttackDamage( uint const attackDamage );
 
 	virtual void	attack( const std::string & target );
-	void			takeDamage( unsigned int amount );
-	void			beRepaired( unsigned int amount );
+	void			takeDamage( uint amount );
+	void			beRepaired( uint amount );
 
 protected:
 
 	// constructor only useable by derived classes
-	ClapTrap( std::string const & name, unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage);
-	ClapTrap( unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage );
+	ClapTrap( std::string const & name, uint hitPoints, uint energyPoints, uint attackDamage);
+	ClapTrap( uint hitPoints, uint energyPoints, uint attackDamage );
 
 	std::string	_name;
-	unsigned int		_hitPoints;
-	unsigned int		_energyPoints;
-	unsigned int		_attackDamage;
+	uint		_hitPoints;
+	uint		_energyPoints;
+	uint		_attackDamage;
 
 };
 
